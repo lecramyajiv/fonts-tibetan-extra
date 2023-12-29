@@ -1,0 +1,144 @@
+fonts-dzongkha (0.3-9) unstable; urgency=medium
+
+  * debian/changelog
+    - Trim trailing whitespace.
+  * debian/watch
+    - Use secure URI in debian/watch.
+    - Update watch file format version to 4.
+  * debian/control
+    - Bump debhelper from deprecated 9 to 13.
+    - Set debhelper-compat version in Build-Depends.
+    - Update Vcs-* headers to use salsa repository.
+    - Set Standards-Version: 4.5.1
+    - Update Uploaders (Closes: #927657)
+    - Update Maintainer address
+    - Drop obsolete dependencies with ttf-dzongkha
+    - Add Rules-Requires-Root: no
+    - Drop unused debian/fonts-dzongkha.lintian-overrides
+  * debian/rules
+    - Use default compression setting
+  * debian/copyright
+    - convert to copyright format 1.0
+  * Add debian/salsa-ci.yml
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 27 Feb 2021 14:16:49 +0900
+
+fonts-dzongkha (0.3-8.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Sat, 02 Jan 2021 15:23:03 +0100
+
+fonts-dzongkha (0.3-8) unstable; urgency=low
+
+  * Use git for packaging: adapt Vcs-* fields
+  * Update Standards to 3.9.4 (checked)
+  * Bump debhelper compatibility to 9
+  * Drop ttf-dzongkha transitional package
+  * Add Multi-Arch: foreign field
+  * Use Breaks instead of Conflicts. Drop Provides as it is no longer
+    needed (installations should have transitioned since wheezy and the
+    package has anyway no reverse dependency.
+  * Use xz extreme compression for deb packages
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 31 Jul 2013 18:17:42 +0200
+
+fonts-dzongkha (0.3-7) unstable; urgency=low
+
+  * Team upload
+  * Rename source package to "fonts-dzongkha" to fit the Font
+    Packages Naming Policy.
+  * Bump Standards to 3.9.2 (checked)
+  * Avoid lintian warning about fonts being also in ttf-dzongkha
+  * Add Vcs-svn and Vcs-browser fields to debian/control
+  * Drop defoma removal code (dropped in version in stable, now) and
+    therefore drop preinst script
+  * Change fonts install directory from
+    usr/share/fonts/truetype/ttf-dzongkha to
+    usr/share/fonts/truetype/dzongkha
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 23 Aug 2011 22:24:53 +0200
+
+ttf-dzongkha (0.3-6) unstable; urgency=low
+
+  * Drop defoma use
+
+ -- Christian Perrier <bubulle@debian.org>  Wed, 02 Dec 2009 19:15:33 +0100
+
+ttf-dzongkha (0.3-5) unstable; urgency=low
+
+  * Rebuild with new defoma to avoid #557321
+  * Drop README.source (useless with source 3.0 format)
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 22 Nov 2009 15:52:49 +0100
+
+ttf-dzongkha (0.3-4) unstable; urgency=low
+
+  * Completely switch to debhelper 7, with a minimal rules file
+  * No longer use CDBS
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 20 Nov 2009 05:24:14 +0100
+
+ttf-dzongkha (0.3-3) unstable; urgency=low
+
+  * Fix package section. Closes: #551967
+  * Switch to 3.0 (quilt) source format
+  * Add README.source (taken from samba)
+
+ -- Christian Perrier <bubulle@debian.org>  Sun, 08 Nov 2009 19:03:10 +0100
+
+ttf-dzongkha (0.3-2) unstable; urgency=low
+
+  * Fix hints file to properly point at the right file
+    Closes: #551507
+  * Bump debhelper compatibility to 7
+  * Add ${misc:Depends} to binary packages dependencies to properly
+    cope with dependencies added by debhelper utilities
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 20 Oct 2009 22:10:44 +0200
+
+ttf-dzongkha (0.3-1) unstable; urgency=low
+
+  * Set the pkg-fonts team as Maintainer and myself as Uploade
+  * New upstream version. Closes: #421445
+
+ -- Christian Perrier <bubulle@debian.org>  Mon, 07 May 2007 19:53:36 +0200
+
+ttf-dzongkha (0.2-4) unstable; urgency=low
+
+  * No longer build a udeb as Dzongkha is rendered with another font now
+    Closes: #405039
+
+ -- Christian Perrier <bubulle@debian.org>  Mon,  1 Jan 2007 12:29:47 +0100
+
+ttf-dzongkha (0.2-3) unstable; urgency=low
+
+  * Bump Standards to 3.7.2.0 (no change)
+  * Move cdbs and debhelper to Build-Depends. Thanks, lintian.
+
+ -- Christian Perrier <bubulle@debian.org>  Wed,  9 Aug 2006 09:23:14 -0500
+
+ttf-dzongkha (0.2-2) unstable; urgency=low
+
+  * Add a udeb package for the graphical installer
+    Closes: #363251
+
+ -- Christian Perrier <bubulle@debian.org>  Tue, 18 Apr 2006 08:56:07 +0200
+
+ttf-dzongkha (0.2-1) unstable; urgency=low
+
+  * New upstream version
+  * Add Jomolhari-README.txt to doc files
+  * Change Christopher's address in the copyright file
+  * Change font family to Tibetan
+  * More complete copyright file after Joerg Jaspert advices on -devel-annouce
+
+ -- Christian Perrier <bubulle@debian.org>  Fri, 24 Mar 2006 08:18:29 +0100
+
+ttf-dzongkha (0.1-1) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Initial Release. Closes: #355088
+
+ -- Christian Perrier <bubulle@debian.org>  Sat,  4 Mar 2006 13:53:37 +0100
